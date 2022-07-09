@@ -1,0 +1,5 @@
+ignore
+MiniProject
+node_modules
+package-lock.json
+.env
