@@ -30,13 +30,13 @@
     {{#each posts as |post|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/post/{{post.id}}">{{post.name}}</a></h4>
+        <h4><a href="/post/{{post.id}}">{{post.title}}</a></h4>
       </div>
       <div class="col-md-2">
         <button class="btn btn-sm btn-link" id="testing" type="submit" data-id="{{post.id}}">EDIT</button>
       </div>
       <div class="col-md-2">
-        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+        <button class="btn btn-sm btn-danger" id="delete-button" data-id="{{post.id}}">DELETE</button>
       </div>
     </div>
     <div class = "col-md-8" id="desc-edit-box">
@@ -48,4 +48,3 @@
 </div>
 
 <script src="./js/profile.js"></script>
- 

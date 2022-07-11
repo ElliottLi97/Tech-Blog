@@ -1,18 +1,19 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#post-name').value.trim();
+  const title = document.querySelector('#post-name').value.trim();
   const description = document.querySelector('#post-desc').value.trim();
 
-  if (name && description) {
+  if (title && description) {
     const response = await fetch(`/api/posts`, {
       method: 'POST',
-      body: JSON.stringify({name, description}),
+      body: JSON.stringify({title, description}),
       headers: {
         'Content-Type': 'application/json',
       },
     });
-
+    console.log(title, description, "********")
+    console.log(response)
     if (response.ok) {
       document.location.replace('/profile');
     } else {
@@ -64,12 +65,12 @@ document
   .querySelector('.new-post-form')
   .addEventListener('submit', newFormHandler);
 
-document //delete
-  .querySelector('.post-list')
+document //edit
+  .querySelector('#testing')//.post-list
   .addEventListener('click', editButtonHandler);
 
-// document
-//   .querySelector('.post-list')
-//   .addEventListener('submit', editButtonHandler);
+document
+  .querySelector('#delete-button')
+  .addEventListener('click', delButtonHandler);
 
   //document.querySelector('#testing').parentElement.parentElement.nextElementSibling

@@ -34,3 +34,7 @@ header, .project:not(:last-child) {
 .render{
   justify-content: center;
 }
+
+#comment-writing{
+  display: none;
+}
