@@ -37,4 +37,5 @@ header, .project:not(:last-child) {
 
 #comment-writing{
   display: none;
+  flex-direction: column;
 }

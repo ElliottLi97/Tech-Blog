@@ -29,8 +29,8 @@ const newFormHandler = async (event) => {
 function renderComment() {
     console.log("working")
     var x = document.getElementById("comment-writing");
-    if (x.style.display !== "block") {
-        x.style.display = "block";
+    if (x.style.display !== "flex") {
+        x.style.display = "flex";
     } else {
         x.style.display = "none";
     }
